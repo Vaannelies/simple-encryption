@@ -1,0 +1,105 @@
+
+<script>
+
+    function converter(){
+        let newWord = " ";
+        let word = prompt("What do you want to convert?");
+
+
+        for (let i = 0; i < word.length; i++) { //execute with every character
+
+
+            let character = word.charAt(i);
+            //the character of the word is now the value of the variable 'character'
+
+            if(character == "a") {character = "n"} //a becomes c
+            else if(character == "b") {character = "z"} //b becomes y etc.
+            else if(character == "c") {character = "l"}
+            else if(character == "d") {character = "b"}
+            else if(character == "e") {character = "m"}
+            else if(character == "f") {character = " "}
+            else if(character == "g") {character = "s"}
+            else if(character == "h") {character = "p"}
+            else if(character == "i") {character = "f"}
+            else if(character == "j") {character = "u"}
+            else if(character == "k") {character = "y"}
+            else if(character == "l") {character = "r"}
+            else if(character == "m") {character = "i"}
+            else if(character == "n") {character = "o"}
+            else if(character == "o") {character = "q"}
+            else if(character == "p") {character = "e"}
+            else if(character == "q") {character = "d"}
+            else if(character == "r") {character = "k"}
+            else if(character == "s") {character = "c"}
+            else if(character == "t") {character = "v"}
+            else if(character == "u") {character = "a"}
+            else if(character == "v") {character = "g"}
+            else if(character == "w") {character = "j"}
+            else if(character == "x") {character = "h"}
+            else if(character == "y") {character = "x"}
+            else if(character == "z") {character = "t"}
+            else if(character == " ") {character = "w"}
+            newWord = newWord + character;
+
+        }
+        return newWord;
+    }
+
+    function translator(){
+        let newWord = " ";
+        let word = prompt("What do you want to translate?");
+
+
+        for (let i = 0; i < word.length; i++) { //execute with every character
+
+
+            let character = word.charAt(i);
+            //the character of the word is now the value of the variable 'character'
+
+            if(character == "n") {character = "a"} //a becomes c
+            else if(character == "z") {character = "b"} //b becomes y etc.
+            else if(character == "l") {character = "c"}
+            else if(character == "b") {character = "d"}
+            else if(character == "m") {character = "e"}
+            else if(character == " ") {character = "f"}
+            else if(character == "s") {character = "g"}
+            else if(character == "p") {character = "h"}
+            else if(character == "f") {character = "i"}
+            else if(character == "u") {character = "j"}
+            else if(character == "y") {character = "k"}
+            else if(character == "r") {character = "l"}
+            else if(character == "i") {character = "m"}
+            else if(character == "o") {character = "n"}
+            else if(character == "q") {character = "o"}
+            else if(character == "e") {character = "p"}
+            else if(character == "d") {character = "q"}
+            else if(character == "k") {character = "r"}
+            else if(character == "c") {character = "s"}
+            else if(character == "v") {character = "t"}
+            else if(character == "a") {character = "u"}
+            else if(character == "g") {character = "v"}
+            else if(character == "j") {character = "w"}
+            else if(character == "h") {character = "x"}
+            else if(character == "x") {character = "y"}
+            else if(character == "t") {character = "z"}
+            else if(character == "w") {character = " "}
+
+            newWord = newWord + character;
+
+        }
+        return newWord;
+    }
+</script>
+
+<input class="converterbutton" type="button" onclick="document.getElementById('answer').innerHTML = converter();" value="Encrypt">
+
+<p id='answer'>
+
+</p>
+
+
+<input class="converterbutton" type="button" onclick="document.getElementById('answerTwo').innerHTML = translator();" value="Translate">
+
+<p id='answerTwo'>
+
+</p>
